@@ -27,10 +27,11 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep("Dejar enfriar", 60);
 
             IPrinter printer;
+            IPrint recipePrinter = new RecipeContent(recipe);
             printer = new ConsolePrinter();
-            printer.PrintRecipe(recipe);
+            printer.PrintRecipe(recipePrinter);
             printer = new FilePrinter();
-            printer.PrintRecipe(recipe);
+            printer.PrintRecipe(recipePrinter);
         }
 
         private static void PopulateCatalogs()
